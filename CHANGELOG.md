@@ -1,3 +1,4 @@
-# plaza-security - CHANGELOG.md
+# Changelog
 
-Placeholder for CHANGELOG.md.
+## [Unreleased]
+- Initial scaffold
