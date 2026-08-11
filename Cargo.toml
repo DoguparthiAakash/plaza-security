@@ -1,8 +1,20 @@
 [package]
 name = "plaza-security"
-version = "0.1.0"
+version = "0.1.0-dp1"
 edition = "2021"
+description = "Security subsystem for PlazaVM — RBAC, encryption, auditing, sandboxing, TPM, IAM"
 
 [dependencies]
 plaza-foundation = { version = "0.1.0-dp1", path = "../../shared/plaza-foundation" }
-serde = { workspace = true, features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = "0.1"
+uuid = { version = "1", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+sha2 = "0.10"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "test-util"] }
+
+[workspace]
